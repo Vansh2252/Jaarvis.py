@@ -44,4 +44,20 @@ def takeCommand():
         print("Say that again please...")  
         return "None"
     return query
+  if _name_ == "_main_":
+    wishMe()
+    while True:
+    # if 1:
+        query = takeCommand().lower()
+
+        
+        if 'wikipedia' in query:
+            speak('Searching Wikipedia...')
+            query = query.replace("wikipedia", "")
+            results = wikipedia.summary(query, sentences=2)
+            speak("According to Wikipedia")
+            print(results)
+            speak(results)
+
+
 
