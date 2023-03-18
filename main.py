@@ -58,7 +58,7 @@ def takeCommand():
             speak("According to Wikipedia")
             print(results)
             speak(results)
-   elif 'open youtube' in query:
+               elif 'open youtube' in query:
             webbrowser.open("youtube.com")
 
         elif 'open google' in query:
@@ -70,5 +70,6 @@ def takeCommand():
         elif 'the time' in query:
             strTime = datetime.datetime.now().strftime("%H:%M:%S")    
             speak(f"Sir, the time is {strTime}")
-
+  
+            
 
