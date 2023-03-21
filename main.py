@@ -50,7 +50,26 @@ def takeCommand():
     while True:
     # if 1:
         query = takeCommand().lower()
+        if 'wikipedia' in query:
+            speak('Searching Wikipedia...')
+            query = query.replace("wikipedia", "")
+            results = wikipedia.summary(query, sentences=2)
+            speak("According to Wikipedia")
+            print(results)
+            speak(results)
+               elif 'open youtube' in query:
+            webbrowser.open("youtube.com")
 
+        elif 'open google' in query:
+            webbrowser.open("google.com")
+
+        elif 'open stackoverflow' in query:
+            webbrowser.open("stackoverflow.com")               
+
+        elif 'the time' in query:
+            strTime = datetime.datetime.now().strftime("%H:%M:%S")    
+            speak(f"Sir, the time is {strTime}")
+       
         
         
   
